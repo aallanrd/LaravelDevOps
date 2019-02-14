@@ -1,6 +1,3 @@
-## DOMPDF Wrapper for Laravel 5
-
-### For Laravel 4.x, check the [0.4 branch](https://github.com/barryvdh/laravel-dompdf/tree/0.4)!
 
 Require this package in your composer.json and update composer. This will download the package and the dompdf + fontlib libraries also.
 
@@ -25,13 +22,13 @@ After updating composer add the following lines to register provider in `bootstr
   ```
   $app->register(\Barryvdh\DomPDF\ServiceProvider::class);
   ```
-  
+
 To change the configuration, copy the config file to your config folder and enable it in `bootstrap/app.php`:
 
   ```
   $app->configure('dompdf');
   ```
-  
+
 ## Using
 
 You can create a new DOMPDF instance and load a HTML string, file or view name. You can save it to a file, or stream (show in browser) or download.
@@ -66,7 +63,7 @@ The defaults configuration settings are set in `config/dompdf.php`. Copy this fi
 You can still alter the dompdf options in your code before generating the pdf using this command:
 
     PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
-    
+
 Available options and their defaults:
 * __rootDir__: "{app_directory}/vendor/dompdf/dompdf"
 * __tempDir__: "/tmp" _(available in config/dompdf.php)_
@@ -113,7 +110,7 @@ You can use the CSS `page-break-before`/`page-break-after` properties to create 
     <h1>Page 1</h1>
     <div class="page-break"></div>
     <h1>Page 2</h1>
-    
+
 ### License
 
 This DOMPDF Wrapper for Laravel is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
